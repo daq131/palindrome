@@ -8,11 +8,10 @@
         
 # palindrome('kajak')
 
+def palindrome_sentence(text):
+    filtered_text = ''.join([letter for letter in text if letter.isalnum()]).casefold()
+    return True if filtered_text == filtered_text[::-1] else False
 
-def palindrome_sentence(txt):
-    new_text = txt.replace(' ', '').replace(',','').replace('.', '').lower()
-    return True if new_text == new_text[::-1] else False
-    
-palindrome_sentence('a, To kanapa pana kota')
+palindrome_sentence('a, To kanapa pana kota!@')
 palindrome_sentence('a tu mam mamuta')
 palindrome_sentence('Wczora z wieczora')
